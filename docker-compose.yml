@@ -2,6 +2,7 @@ version: "3.3"
 volumes:
     openmaint-db:
     openmaint-tomcat:
+    #bimserver-home:
 
 services:
     openmaint_db:
@@ -40,3 +41,12 @@ services:
             - JAVA_OPTS=-Xmx4000m -Xms2000m
         # mem_limit: 4000m
         # mem_reservation: 2000m
+
+    
+    bimserver:
+        image: asti/bimserver:1.5.138
+        container_name: bimserver
+        ports: 
+            - 8080:8080
+        #volumes:
+        #    - bimserver-home:/home/bimserver_home
