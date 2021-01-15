@@ -10,7 +10,7 @@ docker run --name openmaint_app --restart unless-stopped -e CMDBUILD_DUMP="demo.
 
 or use docker-compose:
 ```bash
-docker-compose up docker-compose/file/location
+docker-compose up file/location
 ```
 
 #### CMDBUILD_DUMP values
